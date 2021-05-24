@@ -27,7 +27,7 @@ public class CustomerController {
     @Column(length = 20)
     private String telefoonnummer;
 
-    @JsonIgnoreProperties("customer")
+    @JsonIgnoreProperties("Customer")
 
     // constructor
     public CustomerController() {
