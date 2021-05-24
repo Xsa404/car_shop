@@ -1,8 +1,7 @@
 package com.application.car_shop.model;
 
-import io.jsonwebtoken.lang.Objects;
 import java.io.Serializable;
-
+import java.util.Objects;
 
 public class AuthorityKey implements Serializable {
     private String username;
