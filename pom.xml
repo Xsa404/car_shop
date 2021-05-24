@@ -8,11 +8,11 @@
 		<version>2.4.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>nl.novi.springboot</groupId>
-	<artifactId>first_demo</artifactId>
+	<groupId>com.application.car_shop</groupId>
+	<artifactId>car_shop</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>first_demo</name>
-	<description>Demo project voor Spring Boot</description>
+	<name>car_shop</name>
+	<description>Zsa Zsa's project voor Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
