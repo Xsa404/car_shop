@@ -1,4 +1,4 @@
 package com.application.car_shop.exception;
 
-public class RecordNotFound {
+public class RecordNotFound extends RuntimeException {
 }
