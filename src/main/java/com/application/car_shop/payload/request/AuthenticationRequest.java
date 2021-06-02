@@ -1,4 +1,4 @@
-package com.application.car_shop.payload;
+package com.application.car_shop.payload.request;
 
 public class AuthenticationRequest {
 
