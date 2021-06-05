@@ -33,7 +33,7 @@ public class Employee {
         this.id = id;
     }
 
-    public String getNaam() {
+    public String getName() {
         return name;
     }
 

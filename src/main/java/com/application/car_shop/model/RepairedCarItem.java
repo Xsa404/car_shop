@@ -41,4 +41,43 @@ public class RepairedCarItem {
 
     // Getters and Setters
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getItemName() {
+        return itemName;
+    }
+
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
+    }
+
+    public String getPriceInEuro() {
+        return priceInEuro;
+    }
+
+    public void setPriceInEuro(String priceInEuro) {
+        this.priceInEuro = priceInEuro;
+    }
+
+    public String getOperation() {
+        return operation;
+    }
+
+    public void setOperation(String operation) {
+        this.operation = operation;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 }
