@@ -16,16 +16,16 @@ public class CustomerController {
     private long id;
 
     @Column(length = 80)
-    private String voornaam;
+    private String firstname;
 
     @Column(length = 80)
-    private String achternaam;
+    private String lastname;
 
     @Column(length = 80)
-    private String woonplaats;
+    private String residence;
 
     @Column(length = 20)
-    private String telefoonnummer;
+    private String phonenumber;
 
     @JsonIgnoreProperties("Customer")
 
@@ -33,15 +33,16 @@ public class CustomerController {
     public CustomerController() {
     }
 
-    public CustomerController(long customer_id, String voornaam, String achternaam, String woonplaats, String telefoonnummer) {
+    public CustomerController(long customer_id, String firstname, String lastname, String residence, String phonenumber) {
         this.id = customer_id;
-        this.voornaam = voornaam;
-        this.achternaam = achternaam;
-        this.woonplaats = woonplaats;
-        this.telefoonnummer = telefoonnummer;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.residence = residence;
+        this.phonenumber = phonenumber;
     }
 
     // getters and setters
+
     public long getId() {
         return id;
     }
@@ -50,35 +51,35 @@ public class CustomerController {
         this.id = id;
     }
 
-    public String getVoornaam() {
-        return voornaam;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setVoornaam(String voornaam) {
-        this.voornaam = voornaam;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
-    public String getAchternaam() {
-        return achternaam;
+    public String getLastname() {
+        return lastname;
     }
 
-    public void setAchternaam(String achternaam) {
-        this.achternaam = achternaam;
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
-    public String getWoonplaats() {
-        return woonplaats;
+    public String getResidence() {
+        return residence;
     }
 
-    public void setWoonplaats(String woonplaats) {
-        this.woonplaats = woonplaats;
+    public void setResidence(String woonplaats) {
+        this.residence = residence;
     }
 
-    public String getTelefoonnummer() {
-        return telefoonnummer;
+    public String getPhonenumber() {
+        return phonenumber;
     }
 
-    public void setTelefoonnummer(String telefoonnummer) {
-        this.telefoonnummer = telefoonnummer;
+    public void setPhonenumber(String phonenumber) {
+        this.phonenumber = phonenumber;
     }
 }
