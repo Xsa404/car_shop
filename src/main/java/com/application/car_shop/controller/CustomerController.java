@@ -1,85 +1,53 @@
 package com.application.car_shop.controller;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import org.springframework.web.bind.annotation.RequestMapping;
+import com.application.car_shop.model.Customer;
+import com.application.car_shop.service.CustomerService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import javax.persistence.*;
+import java.net.URI;
 
-@Entity
-@Table(name = "Customers")
-@RequestMapping(value = "/v1")
-
+@RestController
+@RequestMapping("/v1")
 public class CustomerController {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
 
-    @Column(length = 80)
-    private String firstname;
+     CustomerService customerService;
 
-    @Column(length = 80)
-    private String lastname;
-
-    @Column(length = 80)
-    private String residence;
-
-    @Column(length = 20)
-    private String phonenumber;
-
-    @JsonIgnoreProperties("Customer")
-
-    // constructor
-    public CustomerController() {
+    @GetMapping(value = "/customers")
+    public ResponseEntity<Object> getCustomer(@RequestParam(required = false) String name) {
+        return new ResponseEntity<>(customerService.getCustomerByName(name), HttpStatus.OK);
     }
 
-    public CustomerController(long customer_id, String firstname, String lastname, String residence, String phonenumber) {
-        this.id = customer_id;
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.residence = residence;
-        this.phonenumber = phonenumber;
+    @GetMapping(value = "/customers/{id}")
+    public ResponseEntity<Object> getCustomer(@PathVariable("id") Integer id) {
+        return  new ResponseEntity<>(customerService.getCustomerById(id), HttpStatus.OK);
     }
 
-    // getters and setters
+    @PostMapping(value = "/customers")
+    public ResponseEntity<Object> addCustomer(@RequestBody Customer customer) {
 
-    public long getId() {
-        return id;
+        long newId = customerService.addCustomer(customer);
+
+        URI location = ServletUriComponentsBuilder.fromCurrentRequest()
+                .path("/{id}")
+                .buildAndExpand(newId)
+                .toUri();
+
+        return ResponseEntity.created(location).build();
     }
 
-    public void setId(long id) {
-        this.id = id;
+    @DeleteMapping(value = "/customers/{id}")
+    public ResponseEntity<Object> deleteCustomer(@PathVariable("id") Integer id) {
+        customerService.deleteCustomer(id);
+        return new ResponseEntity<>("Record deleted", HttpStatus.NO_CONTENT);
     }
 
-    public String getFirstname() {
-        return firstname;
-    }
-
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
-    }
-
-    public String getLastname() {
-        return lastname;
-    }
-
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
-    }
-
-    public String getResidence() {
-        return residence;
-    }
-
-    public void setResidence(String residence) {
-        this.residence = residence;
-    }
-
-    public String getPhonenumber() {
-        return phonenumber;
-    }
-
-    public void setPhonenumber(String phonenumber) {
-        this.phonenumber = phonenumber;
+    @PutMapping(value = "/customers/{id}")
+    public ResponseEntity<Object> updateCustomer(@PathVariable("id") Integer id, @RequestBody Customer customer) {
+        customerService.updateCustomer(id, customer);
+        return new ResponseEntity<>("Record updated", HttpStatus.NO_CONTENT);
     }
 }

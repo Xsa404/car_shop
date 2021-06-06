@@ -13,10 +13,10 @@ public class Employee {
     private long id;
 
     @Column
-    private String job;
+    private String name;
 
     @Column
-    private String name;
+    private String job;
 
     @Column
     private String employeeNumber;
