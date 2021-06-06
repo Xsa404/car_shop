@@ -5,7 +5,7 @@ import com.application.car_shop.payload.response.AuthenticationResponse;
 
 public interface UserAuthenticateService {
 
-    public AuthenticationResponse autenticateUser(AuthenticationRequest autenicationRequest);
+    public AuthenticationResponse authenticatedUser(AuthenticationRequest autenicationRequest);
 
 }
     /* uses AuthenticationResponse and AuthenticationRequest

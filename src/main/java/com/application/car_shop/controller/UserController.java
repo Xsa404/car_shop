@@ -16,7 +16,7 @@ import java.util.Map;
 @RequestMapping(value = "/v1/users")
 public class UserController {
 
-    @Autowired
+    @Autowired // waarom doet deze het wel maar employee en customer niet?
     private UserService userService;
 
     @GetMapping(value = "")

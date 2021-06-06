@@ -42,12 +42,12 @@ public class EmployeeController {
     @DeleteMapping(value = "/employee/{id}")
     public ResponseEntity<Object> deleteEmployee(@PathVariable("id") Integer id) {
         employeeService.deleteEmployee(id);
-        return new ResponseEntity<>("Record deleted", HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>("Record successfully deleted", HttpStatus.NO_CONTENT);
     }
 
     @PutMapping(value = "/employee/{id}")
     public ResponseEntity<Object> updateEmployee(@PathVariable("id") Integer id, @RequestBody Employee employee) {
         employeeService.updateEmployee(id, employee);
-        return new ResponseEntity<>("Record updated", HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>("Record successfully updated", HttpStatus.NO_CONTENT);
     }
 }

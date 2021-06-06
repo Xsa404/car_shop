@@ -42,12 +42,12 @@ public class CustomerController {
     @DeleteMapping(value = "/customers/{id}")
     public ResponseEntity<Object> deleteCustomer(@PathVariable("id") Integer id) {
         customerService.deleteCustomer(id);
-        return new ResponseEntity<>("Record deleted", HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>("Record successfully deleted", HttpStatus.NO_CONTENT);
     }
 
     @PutMapping(value = "/customers/{id}")
     public ResponseEntity<Object> updateCustomer(@PathVariable("id") Integer id, @RequestBody Customer customer) {
         customerService.updateCustomer(id, customer);
-        return new ResponseEntity<>("Record updated", HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>("Record successfully updated", HttpStatus.NO_CONTENT);
     }
 }
