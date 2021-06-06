@@ -71,7 +71,7 @@ public class CustomerController {
         return residence;
     }
 
-    public void setResidence(String woonplaats) {
+    public void setResidence(String residence) {
         this.residence = residence;
     }
 
