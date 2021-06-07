@@ -1,4 +1,4 @@
-package com.application.car_shop.service;
+package com.application.car_shop.repository;
 
 public interface RepairedCarItemRepository {
 }
