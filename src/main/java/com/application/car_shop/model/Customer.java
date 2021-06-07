@@ -16,16 +16,16 @@ public class Customer {
     private long id;
 
     @Column(length = 80)
-    private String firstname;
+    private String firstName;
 
     @Column(length = 80)
-    private String lastname;
+    private String lastName;
 
     @Column(length = 80)
     private String residence;
 
     @Column(length = 20)
-    private String phonenumber;
+    private String phoneNumber;
 
     @JsonIgnoreProperties("Customer")
 
@@ -34,12 +34,12 @@ public class Customer {
     public Customer() {
     }
 
-    public Customer(long customer_id, String firstname, String lastname, String residence, String phonenumber) {
-        this.id = customer_id;
-        this.firstname = firstname;
-        this.lastname = lastname;
+    public Customer(long customerId, String firstName, String lastName, String residence, String phoneNumber) {
+        this.id = customerId;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.residence = residence;
-        this.phonenumber = phonenumber;
+        this.phoneNumber = phoneNumber;
     }
 
     // getters and setters
@@ -52,20 +52,20 @@ public class Customer {
         this.id = id;
     }
 
-    public String getFirstname() {
-        return firstname;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
+    public void setFirstName(String firstname) {
+        this.firstName = firstname;
     }
 
     public String getLastname() {
-        return lastname;
+        return lastName;
     }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
+    public void setLastname(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getResidence() {
@@ -76,11 +76,11 @@ public class Customer {
         this.residence = residence;
     }
 
-    public String getPhonenumber() {
-        return phonenumber;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setPhonenumber(String phonenumber) {
-        this.phonenumber = phonenumber;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 }

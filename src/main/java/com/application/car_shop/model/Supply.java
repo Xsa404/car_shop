@@ -14,24 +14,24 @@ public class Supply {
     private String itemName;
 
     @Column(length = 80)
-    private String price_in_euro;
+    private String priceInEuro;
 
     @Column(length = 80)
-    private String storage_location;
+    private String storageLocation;
 
     @Column(length = 20)
-    private String phonenumber;
+    private String phoneNumber;
 
     // constructors
     public Supply() {
     }
 
-    public Supply(long stock_id, String itemName, String price_in_euro, String storage_location, String phonenumber) {
-        this.id = stock_id;
+    public Supply(long stockId, String itemName, String priceInEuro, String storageLocation, String phoneNumber) {
+        this.id = stockId;
         this.itemName = itemName;
-        this.price_in_euro = price_in_euro;
-        this.storage_location = storage_location;
-        this.phonenumber = phonenumber;
+        this.priceInEuro = priceInEuro;
+        this.storageLocation = storageLocation;
+        this.phoneNumber = phoneNumber;
     }
 
     // getters and setters
@@ -46,30 +46,30 @@ public class Supply {
 
     public String getItemName() { return itemName; }
 
-    public void setItem_name(String itemName) {
+    public void setItemName(String itemName) {
         this.itemName = itemName;}
 
-    public String getPrice_in_euro() {
-        return price_in_euro;
+    public String getPriceInEuro() {
+        return priceInEuro;
     }
 
-    public void setPrice_in_euro(String price_in_euro) {
-        this.price_in_euro = price_in_euro;
+    public void setPriceInEuro(String priceInEuro) {
+        this.priceInEuro = priceInEuro;
     }
 
-    public String getStorage_location() {
-        return storage_location;
+    public String getStorageLocation() {
+        return storageLocation;
     }
 
-    public void setStorage_location(String storage_location) {
-        this.storage_location = storage_location;
+    public void setStorageLocation(String storage_location) {
+        this.storageLocation = storage_location;
     }
 
-    public String getPhone_number() {
-        return phonenumber;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setPhone_number(String phonenumber) {
-        this.phonenumber = phonenumber;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 }

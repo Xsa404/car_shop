@@ -14,5 +14,5 @@ public interface SupplyService {
         void deleteSupply(long id);
 
         void updateSupply(long id, Supply supply);
-    }
+}
 

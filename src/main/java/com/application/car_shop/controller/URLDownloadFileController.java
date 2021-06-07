@@ -1,4 +1,6 @@
 package com.application.car_shop.controller;
 
-public class DownloadFileController {
+public class URLDownloadFileController {
+
 }
+

@@ -30,8 +30,8 @@ public class RepairedCarItem {
 
     }
 
-    public RepairedCarItem(long stock_id, String itemName, String Price, String operation, String status) {
-        this.id = stock_id;
+    public RepairedCarItem(long stockId, String itemName, String Price, String operation, String status) {
+        this.id = stockId;
         this.itemName = itemName;
         this.priceInEuro = Price;
         this.operation = operation;
