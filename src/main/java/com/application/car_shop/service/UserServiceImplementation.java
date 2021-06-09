@@ -7,7 +7,6 @@ import com.application.car_shop.model.ApplicationAuthority;
 import com.application.car_shop.model.ApplicationUser;
 import com.application.car_shop.repository.UserRepository;
 import com.application.car_shop.utilities.RandomStringGenerator;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
@@ -17,8 +16,11 @@ import java.util.Set;
 @Service
 public class UserServiceImplementation implements UserService {
 
-    @Autowired
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
+
+    public UserServiceImplementation(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
     @Override
     public Collection<ApplicationUser> getUsers() {
