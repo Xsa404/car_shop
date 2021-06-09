@@ -2,7 +2,6 @@ package com.application.car_shop.filter;
 
 import com.application.car_shop.config.CustomUserDetailService;
 import com.application.car_shop.utilities.JwtUtil;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -19,11 +18,14 @@ import java.io.IOException;
 @Component
 public class JsonWebTokenRequestFilter extends OncePerRequestFilter {
 
-    @Autowired
-    private CustomUserDetailService userDetailsService;
+    private final CustomUserDetailService userDetailsService;
 
-    @Autowired
-    private JwtUtil jwtUtil;
+    private final JwtUtil jwtUtil;
+
+    public JsonWebTokenRequestFilter(CustomUserDetailService userDetailsService, JwtUtil jwtUtil) {
+        this.userDetailsService = userDetailsService;
+        this.jwtUtil = jwtUtil;
+    }
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
