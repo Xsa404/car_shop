@@ -26,13 +26,15 @@ public class Supply {
     public Supply() {
     }
 
-    public Supply(long stockId, String itemName, String priceInEuro, String storageLocation, String phoneNumber) {
-        this.id = stockId;
+    public Supply(long supplyId, String itemName, String priceInEuro, String storageLocation, String phoneNumber) {
+        this.id = supplyId;
         this.itemName = itemName;
         this.priceInEuro = priceInEuro;
         this.storageLocation = storageLocation;
         this.phoneNumber = phoneNumber;
     }
+
+
 
     // getters and setters
 

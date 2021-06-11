@@ -11,8 +11,11 @@ public interface RepairedCarItemService {
 
     long addRepair(RepairedCarItemService repair);
 
+    long addRepair(RepairedCarItem repair);
+
     void deleteRepair(long id);
 
     void updateRepair(long id, RepairedCarItemService repair);
 
+    void updateRepair(long id, RepairedCarItem repair);
 }
