@@ -82,7 +82,7 @@ public class SpringBootSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.DELETE, "/v1/employee/**").hasRole("ADMIN")
                 .antMatchers(HttpMethod.PATCH, "/v1/employee/**").hasRole("ADMIN")
 
-                // customers kunnen alleen een get vragen op hun eigen informatie
+                // CUSTOMERS
                 .antMatchers(HttpMethod.GET, "/v1/customers/1").hasRole("CUSTOMER_1")
                 .antMatchers(HttpMethod.GET, "/v1/customers/2").hasRole("CUSTOMER_2")
                 .antMatchers(HttpMethod.GET, "/v1/customers/3").hasRole("CUSTOMER_3")
@@ -107,7 +107,7 @@ public class SpringBootSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.DELETE, "/v1/repair/**").hasRole("MECHANIC")
                 .antMatchers(HttpMethod.PATCH, "/v1/repair/**").hasRole("MECHANIC")
 
-                //
+                // CASHIER
                 .antMatchers(HttpMethod.GET, "/v1/repair/**").hasRole("CASHIER")
 
                 // ADMINISTRATOR
