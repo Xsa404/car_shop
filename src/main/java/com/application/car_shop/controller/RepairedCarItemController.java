@@ -12,22 +12,22 @@ import java.net.URI;
 @RequestMapping("/v1")
 public class RepairedCarItemController {
 
-    RepairedCarItemService repairService;
+    RepairedCarItemService repairedCarItemService;
 
     @GetMapping(value = "/repair")
     public ResponseEntity<Object> getRepair(@RequestParam(required = false) String name) {
-        return new ResponseEntity<>(repairService.getRepairByName(name), HttpStatus.OK);
+        return new ResponseEntity<>(repairedCarItemService.getRepairByName(name), HttpStatus.OK);
     }
 
     @GetMapping(value = "/repair/{id}")
     public ResponseEntity<Object> getRepair(@PathVariable("id") Integer id) {
-        return  new ResponseEntity<>(repairService.getRepairById(id), HttpStatus.OK);
+        return  new ResponseEntity<>(repairedCarItemService.getRepairById(id), HttpStatus.OK);
     }
 
     @PostMapping(value = "/repair")
     public ResponseEntity<Object> addRepair(@RequestBody RepairedCarItemService repair) {
 
-        long newId = repairService.addRepair(repair);
+        long newId = repairedCarItemService.addRepair(repair);
 
         URI location = ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("/{id}")
@@ -39,13 +39,13 @@ public class RepairedCarItemController {
 
     @DeleteMapping(value = "/repair/{id}")
     public ResponseEntity<Object> deleteRepair(@PathVariable("id") Integer id) {
-        repairService.deleteRepair(id);
+        repairedCarItemService.deleteRepair(id);
         return new ResponseEntity<>("Record deleted", HttpStatus.NO_CONTENT);
     }
 
     @PutMapping(value = "/repair/{id}")
     public ResponseEntity<Object> updateRepair(@PathVariable("id") Integer id, @RequestBody RepairedCarItemService repair) {
-        repairService.updateRepair(id, repair);
+        repairedCarItemService.updateRepair(id, repair);
         return new ResponseEntity<>("Record updated", HttpStatus.NO_CONTENT);
     }
 }
