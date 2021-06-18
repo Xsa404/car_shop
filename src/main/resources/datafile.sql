@@ -40,11 +40,11 @@ VALUES
 ('Cashier', 'C. Ash', '#0003'),
 ('Administrator', 'R. Egister', '#0004');
 
-INSERT INTO supply (itemName, priceInEuro, storageLocation, phoneNumber)
+INSERT INTO supply (itemName, price, storageLocation, phoneNumber)
 VALUES
 ('APK-Keuring', '€45', 'Apeldoorn', '0639303393'),
-('banden', '€180', 'Apeldoorn', '0639303393'),
-('Remmen', '€400', 'Apeldoorn', '0639303393'),
+('Remmen', '€400', 'Apeldoorn', '0639303393')
+('banden', '€200', 'Apeldoorn', '0639303393'),
 ('Ruiten grondig reinigen', '€30', 'Apeldoorn', '0639303393'),
 ('Nieuwe verlichting', '€40', 'Apeldoorn', '0639004321'),
 ('Navigatie Software Update Pakket', '€80', 'Apeldoorn', '0639303393'),
@@ -56,7 +56,7 @@ INSERT INTO repair (item, price, Changes made, status)
 VALUES
 ('APK-keuring', '€45', 'algemene kosten voor de APK-Keuring', 'status onbekend'),
 ('Remmen', '€400', 'remmen vervangen omdat ze versleten zijn', 'status onbekend'),
-('banden', '€180', 'banden vervangen voor zomerbanden', 'status onbekend'),
+('banden', '€200', 'banden vervangen voor zomerbanden', 'status onbekend'),
 ('lichten', '€350', 'knipperlicht linksvoor is kapot', 'status wordt gerepareerd'),
 ('voorruit', '€250', 'sterretje in de voorruit maken', 'status onbekend');
 

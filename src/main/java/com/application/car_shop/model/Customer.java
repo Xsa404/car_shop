@@ -34,8 +34,8 @@ public class Customer {
     public Customer() {
     }
 
-    public Customer(long customerId, String firstName, String lastName, String residence, String phoneNumber) {
-        this.id = customerId;
+    public Customer(long Id, String firstName, String lastName, String residence, String phoneNumber) {
+        this.id = Id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.residence = residence;
