@@ -28,12 +28,12 @@ INSERT INTO authorities (username, authority) VALUES ('customer_4', 'ROLE_CUSTOM
 
 
 
-INSERT INTO customers (First_Name, achternaam, woonplaats, telefoonnummer)
+INSERT INTO customers (FirstName, LastName, residence, phoneNumber)
 VALUES
 ('Zsa Zsa', 'Zonnenberg', 'Apeldoorn', '0639303393'),
 ('Joost', 'van Aartsen', 'Raalte', '088888867');
 
-INSERT INTO employees (job, naam, werknemersnummer)
+INSERT INTO employees (job, naam, employeesNumber)
 VALUES
 ('Mechanic', 'R. Epair', '#0001'),
 ('Backoffice', 'B. Ack', '#0002'),
