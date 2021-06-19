@@ -117,7 +117,7 @@ public class SpringBootSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.PATCH, "/v1/customers/**").hasRole("ADMINISTRATOR")
 
                 .antMatchers("/v1/users/**").hasRole("ADMIN")
-                .antMatchers("/v1/emplyee/**").hasRole("USER")
+                .antMatchers("/v1/employee/**").hasRole("USER")
                 .antMatchers("/v1/customers/**").hasRole("USER")
 //
                 .antMatchers(HttpMethod.GET,"/authenticated/**").authenticated()
