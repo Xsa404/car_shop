@@ -59,7 +59,7 @@ public class SupplyServiceImplementation implements SupplyService {
             existingSupply.setItemName(supply.getItemName());
             existingSupply.setPriceInEuro(supply.getPriceInEuro());
             existingSupply.setStorageLocation(supply.getStorageLocation());
-            existingSupply.setPhoneNumber(supply.getPhoneNumber());
+            existingSupply.setProductNumber(supply.getProductNumber());
             supplyRepository.save(existingSupply);
 
         } else {

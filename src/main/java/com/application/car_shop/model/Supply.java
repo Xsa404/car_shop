@@ -20,18 +20,18 @@ public class Supply {
     private String storageLocation;
 
     @Column(length = 20)
-    private String phoneNumber;
+    private String productNumber;
 
     // constructors
     public Supply() {
     }
 
-    public Supply(long supplyId, String itemName, String priceInEuro, String storageLocation, String phoneNumber) {
+    public Supply(long supplyId, String itemName, String priceInEuro, String storageLocation, String productNumber) {
         this.id = supplyId;
         this.itemName = itemName;
         this.priceInEuro = priceInEuro;
         this.storageLocation = storageLocation;
-        this.phoneNumber = phoneNumber;
+        this.productNumber = productNumber;
     }
 
 
@@ -63,15 +63,15 @@ public class Supply {
         return storageLocation;
     }
 
-    public void setStorageLocation(String storage_location) {
-        this.storageLocation = storage_location;
+    public void setStorageLocation(String storageLocation) {
+        this.storageLocation = storageLocation;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
+    public String getProductNumber() {
+        return productNumber;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setProductNumber(String productNumber) {
+        this.productNumber = productNumber;
     }
 }
