@@ -7,6 +7,11 @@ public class AuthorityKey implements Serializable {
     private String username;
     private String authority;
 
+    public AuthorityKey(String username, String authority) {
+        this.username = username;
+        this.authority = authority;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
